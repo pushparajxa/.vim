@@ -18,3 +18,9 @@ set hlsearch
 set spell spelllang=en_us
 set scrolloff=1 "Number of lines below and above the cursor to be shown.
 set autoread
+"Enables mouse use in all modes
+set mouse=a
+"Set this to the name of your terminal that suppots mouse codes.
+set ttymouse=xterm2
+"Send more characters for redraws
+set ttyfast

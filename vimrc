@@ -1,9 +1,8 @@
-"When finds time read someother options from sensible.vim
-" Configuration
+"When finds time read someother options from sensible.vim Configuration
 
 " Pathogen first
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " Basic Settings
 set nocompatible
@@ -83,3 +82,21 @@ autocmd VimEnter * wincmd p
 "###NERDTREE###############
 "Synatx file for yaml files
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+"#################################
+" Plugin manager
+"#################################
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Initialize plugin system
+call plug#end()
+"#################################
+" End of Plugin manager
+"#################################

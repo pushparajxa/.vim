@@ -1,3 +1,4 @@
+"/* vim: set filetype=ansible : */
 "When finds time read someother options from sensible.vim Configuration
 
 " Pathogen first
@@ -8,14 +9,14 @@
 set nocompatible
 set backspace=indent,eol,start
 filetype plugin indent on
-syntax on
+set ft=ansible
 set shell=/bin/zsh
-"set autoindent
+set autoindent
 set number
 set encoding=utf-8
 set incsearch
 set hlsearch
-set spell spelllang=en_us
+"set spell spelllang=en_us
 set scrolloff=10 "Number of lines below and above the cursor to be shown.
 set autoread
 "Enables mouse use in all modes
@@ -81,7 +82,7 @@ autocmd VimEnter * wincmd p
 
 "###NERDTREE###############
 "Synatx file for yaml files
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/syntax/yaml.vim
 "#################################
 " Plugin manager
 "#################################
@@ -95,8 +96,12 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
+"Anisible plugin
+Plug 'pearofducks/ansible-vim'
+
 " Initialize plugin system
 call plug#end()
 "#################################
 " End of Plugin manager
 "#################################
+
